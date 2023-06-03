@@ -1,0 +1,16 @@
+.addNotes input{
+    line-height: 3rem;
+    width: 61%;
+    padding-left: 20px;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+input{
+    position: relative;
+}
+.formBtn{
+    width: 4rem;
+    line-height: 3rem;
+    position: absolute;
+    font-size: large;
+}

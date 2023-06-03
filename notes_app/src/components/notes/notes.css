@@ -1,0 +1,19 @@
+.note{
+    border: 1px solid grey;
+    padding: 3rem;
+    font-size: 1rem;
+    color: #333;
+    height: 10rem;
+    border-radius: 0.5rem;
+    background-color: antiquewhite;
+    margin-bottom: 1rem;
+}
+.High{
+background-color: red;
+}
+.Medium{
+background-color: green;
+}
+.Low{
+background-color: blue;
+}
