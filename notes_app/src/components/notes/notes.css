@@ -1,19 +1,16 @@
-.note{
-    border: 1px solid grey;
-    padding: 3rem;
-    font-size: 1rem;
-    color: #333;
-    height: 10rem;
-    border-radius: 0.5rem;
-    background-color: antiquewhite;
-    margin-bottom: 1rem;
-}
+
 .High{
-background-color: red;
+background-color: rgb(255, 0, 0);
 }
 .Medium{
-background-color: green;
+background-color: rgb(0, 128, 0);
 }
 .Low{
-background-color: blue;
+background-color: rgb(0, 0, 255);
+}
+.right-corner{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0px 30px;
 }

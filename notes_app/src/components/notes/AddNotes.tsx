@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AddNotes.css"
 import { NotesType,Priority } from "./notes-types";
+import Card from "../card/card";
 
 type AddNotesProp={
   addNotes : (note:NotesType) => void
@@ -28,7 +29,7 @@ const [priority,setPriority] = useState<Priority>("Low")
     setPriority(e.target.value as Priority)
   }
   return (
-    <>
+    <Card bgColor="gray">
     <form className="addNotes">
       <input type="text" placeholder="Add Notes" value={text} onChange={handleChange} />
       <select onChange={handleSelect} value={priority}>
@@ -38,7 +39,7 @@ const [priority,setPriority] = useState<Priority>("Low")
       </select>
       <button className="formBtn" onClick={handleClick}>Add</button>
     </form>
-    </>
+    </Card>
   )
 }
 

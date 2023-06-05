@@ -1,13 +1,37 @@
 import React from 'react'
 import "./notes.css";
-import { propsNotes } from "./notes-types"
+import { Color, Priority } from "./notes-types"
+import Card from '../card/card';
+import { FaTrash,FaEdit } from "react-icons/fa"
 
-const notes = (props : propsNotes) => {
+type propsNotes = {
+  id:string,
+  text : string,
+  priority? : Priority,
+  onDelete: (id:string) => void
+}
+const Notes = (props : propsNotes) => {
+
+  const handleEdit = () => {
+   
+  }
+  const handleDelete = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
+   e.preventDefault();
+   props.onDelete(props.id)
+  }
   return (
-    <div className={`note ${props.priority}`}>
+    <Card bgColor={props.priority && Color[props.priority]} height='5rem' width='60%' margin='auto' marginBottom='1rem'>
+    <>
+    <div>
         <h1>{props.text}</h1>
     </div>
+    <div className='.right-corner'>
+     <FaEdit onClick={handleEdit} />
+     <FaTrash onClick={handleDelete} />
+    </div>
+    </>
+    </Card>
   )
 }
 
-export default notes
+export default Notes
