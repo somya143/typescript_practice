@@ -9,11 +9,13 @@ type propsNotes = {
   text : string,
   priority? : Priority,
   onDelete: (id:string) => void
+  editNote: (id:string) => void
 }
 const Notes = (props : propsNotes) => {
 
-  const handleEdit = () => {
-   
+  const handleEdit = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
+   e.preventDefault();
+   props.editNote(props.id)
   }
   const handleDelete = (e: React.MouseEvent<SVGElement, MouseEvent>) => {
    e.preventDefault();
