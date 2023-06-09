@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./AddNotes.css"
 import { NotesType,Priority } from "./notes-types";
 import Card from "../card/card";
+import { ThemeContext } from "../../context/Theme";
 
 type AddNotesProp={
   addNotes : (note:NotesType) => void;
@@ -12,7 +13,7 @@ type AddNotesProp={
 function AddNotes(props:AddNotesProp){
 const [text,setText] = useState("");
 const [priority,setPriority] = useState<Priority>("Low")
-
+const theme = useContext(ThemeContext);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   }
@@ -54,9 +55,9 @@ const [priority,setPriority] = useState<Priority>("Low")
    }, [props.NoteToBeEditted , props.editMode]);
 
   return (
-    <Card bgColor="gray">
+    <Card bgColor={theme? "#fff":"#333"}>
     <form className="addNotes">
-      <input type="text" placeholder="Add Notes" value={text} onChange={handleChange} />
+      <input type="text" placeholder="Add Notes..." value={text} onChange={handleChange} />
       <select onChange={handleSelect} value={priority}>
         <option value="Low">Low</option>
         <option value="Medium">Medium</option>

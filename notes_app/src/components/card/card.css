@@ -6,3 +6,9 @@
     margin-bottom: 1rem;
     position: relative;
 }
+.card.light{
+    color: #333;
+}
+.card.dark{
+    color: #fff;
+}

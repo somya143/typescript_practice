@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  
+  }
+  .Home{
+    margin: 0 ;
+    text-align: center;
+  }
+  .Home.light{
+    background-color: white;
+    color: black;
+  }
+  .Home.dark{
+    background-color: gray;
+    color: white;
+  }
